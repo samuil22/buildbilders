@@ -85,13 +85,15 @@ body{
   position: relative;
 } */ 
 .carousel_text{
-  right: unset;
-  bottom: 30%;
-  left:0;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: unset;
   background: #000000ad;
-  width: 45%;
+  width: 50%;
   text-align: left;
-  padding-left:15%;
+  transform: translate(50%, -50%);
+  padding: 30px;
 }
 .slide_title{
   font-size: 50px;
@@ -100,8 +102,7 @@ body{
 }
 /* service */
 .service_container{
-  position: relative;
-  left: 2%;
+  position: relative; 
 }
 .service_arrow_icon{ 
     padding: 6px 10px;
@@ -109,21 +110,21 @@ body{
     font-size: 18px;
     margin: 0px 8px 0 0; 
 }
- 
 .service_text {
   border: 3px solid #FAB702;
   padding: 40px; 
-  padding-left: 20%;
-  left: 20%;
-  height: 490px;
+  padding-left: 10%; 
+  height: 100%;
   padding-top: 7%;
 } 
 .service_text p{
   color:#000;
 }
-.service_img {
+.service_img img {
   position: absolute;
-  left:0;
+  left: 100px;
+  top: 50%;
+  transform: translate(0, -50%);
   z-index: 1;
 }
 .service_text h1{
@@ -150,6 +151,7 @@ body{
 .project_img{
   position: relative;
   cursor: pointer;
+  text-align: center;
 } 
 .project_hover {
   position: absolute;
@@ -317,9 +319,7 @@ body{
 .respon_padding_0{
   padding-left: 0 !important;
 }
-.service_container{
-  left: 0;
-}
+ 
 .hide_pro{
   display: none;
 }
@@ -329,6 +329,9 @@ body{
 }
 .team_div{
   margin:5px;
+}
+.full_product01_text {
+  padding: 15px;
 }
 } 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -343,23 +346,26 @@ body{
   width: 60%; 
   padding-left: 8%;
 }
-.service_container{
-  left: 0;
-}
+ .service_img img{
+   position: unset;
+   transform: translate(0, 0);
+ }
+ .service_text{
+   border: none;
+ }
+  
  } 
 @media (min-width: 768px) and (max-width: 991.98px) { 
   .respon_h1{
     font-size: 20px;
   }
-  .carousel_text { 
-    bottom: 9%; 
-    width: 60%; 
-    padding-left: 8%;
+  .carousel_text {  
+    top: 60%;  
   }
-  .service_container{
-    left: 5%;
-  }.service_img img{
-    width: 280px;
+  
+  .service_img img {
+    position: unset;
+    transform: translate(0, 0);
   }
   .service_text p { 
     margin: 0;
@@ -376,6 +382,10 @@ body{
 .blog_text2 {
   margin-top: 2px;
 }
+.service_text{ 
+  padding:0;
+  border: none;
+}
   } 
 @media (min-width: 992px) and (max-width: 1199.98px) { 
   .service_text p { 
@@ -384,12 +394,7 @@ body{
 .respon_h1{
   font-size: 20px;
 }
-.service_text{ 
-  padding-left: 17%;
-}
-.service_container{
-  left: 5%;
-}
+ 
 .service_img img{
   width: 320px;
 }
